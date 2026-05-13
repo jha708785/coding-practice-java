@@ -1,2 +1,3 @@
-package dsa;public class MergeTwoSortedArray {
+package dsa;
+public class MergeTwoSortedArray {
 }

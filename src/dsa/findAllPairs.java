@@ -1,2 +1,3 @@
-package dsa;public class findAllPairs {
+package dsa;
+public class findAllPairs {
 }

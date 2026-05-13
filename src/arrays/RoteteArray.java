@@ -1,2 +1,3 @@
-package arrays;public class RoteteArray {
+package arrays
+;public class RoteteArray {
 }

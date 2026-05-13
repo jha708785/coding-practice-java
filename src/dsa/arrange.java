@@ -1,8 +1,7 @@
-package arrays;
+package dsa;
 
 public class arrange
 {
-
     private static void print(int[] newarr){
         for (int p:newarr){
             System.out.print(p);

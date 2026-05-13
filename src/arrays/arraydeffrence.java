@@ -1,2 +1,4 @@
-package arrays;public class arraydeffrence {
+package arrays;
+
+public class arraydeffrence {
 }

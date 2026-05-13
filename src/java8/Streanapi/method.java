@@ -1,5 +1,6 @@
 package java8.Streanapi;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,7 +16,7 @@ public class method {
 
         // each element operatin return value;
 
-        List<String>name=List.of("sumit","kumar","jha","apple","ape","ant");
+        List<String>name= Arrays.asList("sumit","kumar","jha","apple","ape","ant");
 
         List<String> newname= name.stream().filter(e->e.startsWith("a")).collect(Collectors.toList());
 

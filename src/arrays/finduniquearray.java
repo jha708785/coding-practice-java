@@ -4,7 +4,7 @@ public class finduniquearray {
 
     public static void main(String[] args) {
 
-        int[] arr={1,2,3,4,1,2,3};
+        int[] arr={2,3,4,1,2,3,5};
 
         for (int i=0;i<arr.length;i++){
             boolean unique=true;
@@ -16,7 +16,6 @@ public class finduniquearray {
             }
             if (unique){
                 System.out.println(arr[i]);
-                break;
             }
         }
     }

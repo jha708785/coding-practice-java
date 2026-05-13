@@ -19,6 +19,8 @@ public class secondlargest {
             }
 
         }
+        int min = arr[arr.length - 2];
+        System.out.println(min);
         System.out.println("first"+" " + arr[0] +" second "+" "+arr[1]);
     }
 }
