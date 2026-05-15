@@ -1,5 +1,8 @@
 package string;
 import  java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
 public class counteachword {
     public static void main(String[] args) {
 
@@ -21,31 +24,27 @@ public class counteachword {
             }
 
         }
-        System.out.println(map);
+       // System.out.println(map);
 
-        String maxWord = "";
-        int max = 0;
 
-        for (String key : map.keySet()) {
-            if (map.get(key) > max) {
-                max = map.get(key);
-                maxWord = key;
-            }
+        String[] words = str.split("\\s+");
+        Map<String, Integer> maps = new HashMap<>();
+
+        for(String word : words) {
+
+            maps.put(word, map.getOrDefault(word, 0) + 1);
         }
+        //System.out.println(map);
 
-        System.out.println(maxWord);
+        Map<String, Long> wordCount =
+                Arrays.stream(str.split(" "))
+                        .collect(Collectors.groupingBy(
+                                Function.identity(),
+                                Collectors.counting()
+                        ));
+
+        System.out.println(wordCount);
     }
 }
 
-/*
 
-String str = "sumit kumar jha mangrahta madhubani";
-
-Map<String, Integer> map = new HashMap<>();
-
-for (String word : str.split(" ")) {
-    map.put(word, map.getOrDefault(word, 0) + 1);
-}
-
-System.out.println(map);
- */

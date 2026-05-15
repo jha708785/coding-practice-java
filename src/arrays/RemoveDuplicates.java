@@ -24,7 +24,7 @@ public class RemoveDuplicates {
         // last element add
         temp[j]=a[a.length-1];
 
-        // ✅ सिर्फ valid elements print करो
+        // सिर्फ valid elements print करो
         for(int i=0;i<=j;i++) {
             System.out.print(temp[i] + " ");
         }

@@ -2,6 +2,8 @@ package string;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class Counteachwords {
 
@@ -28,21 +30,26 @@ public class Counteachwords {
             }
             map.put(arr[i], count);
         }
-        System.out.println(map);
+        //System.out.println(map);
 
-        // Step 2: find max
-        char maxChar = ' ';
-        int max = 0;
+        Map<Character, Integer> maps = new HashMap<>();
 
-        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-            if (entry.getValue() > max) {
-                max = entry.getValue();
-                maxChar = entry.getKey();
-            }
+        for(char ch : s.toCharArray()) {
+
+            maps.put(ch, map.getOrDefault(ch, 0) + 1);
         }
 
-        System.out.println("Max char: " + maxChar);
-        System.out.println("Frequency: " + max);
+        System.out.println(map);
 
+        Map<Character, Long> counts =
+                s.chars()
+                        .filter(ch -> ch != ' ') // optional: ignore spaces
+                        .mapToObj(ch -> (char) ch)
+                        .collect(Collectors.groupingBy(
+                                Function.identity(),
+                                Collectors.counting()
+                        ));
+
+       // System.out.println(counts);
     }
 }

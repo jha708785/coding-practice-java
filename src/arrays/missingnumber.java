@@ -6,15 +6,10 @@ public class missingnumber {
 
         int[] a={1,2,4,5,6};
 
-        int exp=a.length+1;
+       int min=0;
+       int max=a.length-1;
+       for (int i=min;i<max;i++){
 
-        int totalsum=exp*(exp+1)/2;
-
-        int sum=0;
-
-        for (int i=0;i<a.length;i++){
-            sum=sum+a[i];
-        }
-        System.out.println(totalsum-sum);
+       }
     }
 }
