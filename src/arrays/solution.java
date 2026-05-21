@@ -1,6 +1,7 @@
 package arrays;
 
 public class solution {
+
     public int maxProfit(int[] prices) {
         int minPrice = Integer.MAX_VALUE;
         int maxProfit = 0;

@@ -28,14 +28,16 @@ public class RemoveDuplicates {
         for(int i=0;i<=j;i++) {
             System.out.print(temp[i] + " ");
         }
-    }
-}
 
-  /* int[] numbers = {1, 2, 2, 3, 4, 4, 5};
+        int[] numbers = {1, 2, 2, 3, 4, 4, 5};
 
         int[] uniqueNumbers = Arrays.stream(numbers)
                 .distinct()
                 .toArray();
 
-        System.out.println(Arrays.toString(uniqueNumbers));*/
+        System.out.println(Arrays.toString(uniqueNumbers));
+    }
+}
+
+
 
